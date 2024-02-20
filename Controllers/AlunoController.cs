@@ -22,9 +22,9 @@ namespace CrudAlunoEM.Controllers
         [HttpGet]
         public IActionResult Details(int matricula)
         {
-            if (matricula == null || matricula == 0)
+            if (matricula == null)
             {
-                return NotFound();
+                return NotFound("Matricula Não Encontrada");
             }
 
             Aluno aluno = interfaceAluno.ConsulteAluno(matricula);
@@ -57,7 +57,7 @@ namespace CrudAlunoEM.Controllers
         [HttpGet]
         public IActionResult Edit(int matricula)
         {
-            if (matricula == null|| matricula == 0)
+            if (matricula == null)
             {
                 return NotFound();
             }

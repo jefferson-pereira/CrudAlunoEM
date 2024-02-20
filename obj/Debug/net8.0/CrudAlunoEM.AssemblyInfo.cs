@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrudAlunoEM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea21b27f380b38a13328ec98a7772caf6d6431fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrudAlunoEM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrudAlunoEM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

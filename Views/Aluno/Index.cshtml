@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Sexo)
             </td>
             <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.Matricula }) |
-                    @Html.ActionLink("Ficha do aluno", "Details", new { id = item.Matricula }) |
-                    @Html.ActionLink("Excluir", "Delete", new { id = item.Matricula })
+                    @Html.ActionLink("Editar", "Edit", new { matricula = item.Matricula }) |
+                    @Html.ActionLink("Ficha do aluno", "Details", new { matricula = item.Matricula }) |
+                    @Html.ActionLink("Excluir", "Delete", new { matricula = item.Matricula })
             </td>
         </tr>
 }

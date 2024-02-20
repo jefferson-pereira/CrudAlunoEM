@@ -235,3 +235,4 @@ C:\Users\jephb\Desktop\CrudAlunoEM\obj\Debug\net8.0\refint\CrudAlunoEM.dll
 C:\Users\jephb\Desktop\CrudAlunoEM\obj\Debug\net8.0\CrudAlunoEM.pdb
 C:\Users\jephb\Desktop\CrudAlunoEM\obj\Debug\net8.0\CrudAlunoEM.genruntimeconfig.cache
 C:\Users\jephb\Desktop\CrudAlunoEM\obj\Debug\net8.0\ref\CrudAlunoEM.dll
+C:\Users\jephb\Desktop\CrudAlunoEM\obj\Debug\net8.0\CrudAlunoEM.sourcelink.json

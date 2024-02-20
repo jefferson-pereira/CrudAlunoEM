@@ -32,7 +32,7 @@ namespace CrudAlunoEM
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Aluno}/{action=Index}/{id?}");
 
             app.Run();
         }
