@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CrudAlunoEMDomain.Aluno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Aluno</h1>
+
+<p>
+    <a asp-action="NovoAluno">Novo Aluno</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDeNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDeNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "Editar", new { matricula = item.Matricula }) |
+                    @Html.ActionLink("Ficha do aluno", "FichaDoAluno", new { matricula = item.Matricula }) |
+                    @Html.ActionLink("Excluir", "Excluir", new { matricula = item.Matricula })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
