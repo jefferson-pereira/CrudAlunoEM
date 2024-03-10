@@ -1,6 +1,6 @@
-﻿using CrudAlunoEMDomain.Enums;
+﻿using EMDomain.Enums;
 
-namespace CrudAlunoEMDomain
+namespace EMDomain
 {
     public class Aluno : IEntidade
     {

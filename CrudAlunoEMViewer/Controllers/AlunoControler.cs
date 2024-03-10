@@ -1,7 +1,7 @@
-﻿using CrudAlunoEMDomain;
+﻿using EMDomain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CrudAlunoEMViewer.Controllers
+namespace EMWeb.Controllers
 {
     public class AlunoController : Controller
     {
@@ -90,7 +90,7 @@ namespace CrudAlunoEMViewer.Controllers
         [HttpGet]
         public IActionResult Excluir(int matricula)
         {
-            if (matricula == null || matricula == 0)
+            if (matricula == null)
             {
                 return NotFound();
             }

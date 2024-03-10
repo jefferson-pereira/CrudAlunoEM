@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CrudAlunoEMDomain\CrudAlunoEMDomain.csproj" />
-    <ProjectReference Include="..\CrudAlunoEMRepository\CrudAlunoEMRepository.csproj" />
+    <ProjectReference Include="..\CrudAlunoEMDomain\EMDomain.csproj" />
+    <ProjectReference Include="..\CrudAlunoEMRepository\EMRepository.csproj" />
   </ItemGroup>
 
 </Project>

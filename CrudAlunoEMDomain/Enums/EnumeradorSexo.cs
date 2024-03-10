@@ -1,4 +1,4 @@
-﻿namespace CrudAlunoEMDomain.Enums
+﻿namespace EMDomain.Enums
 {
     public enum EnumeradorSexo
     {

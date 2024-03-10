@@ -1,7 +1,7 @@
-using CrudAlunoEMDomain;
-using CrudAlunoEMRepository;
+using EMDomain;
+using EMRepository;
 
-namespace CrudAlunoEMViewer
+namespace EMWeb
 {
     public class Program
     {

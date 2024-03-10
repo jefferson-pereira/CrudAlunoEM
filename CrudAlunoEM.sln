@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudAlunoEMViewer", "CrudAlunoEMViewer\CrudAlunoEMViewer.csproj", "{38F3B6B9-8229-414E-BCC1-CD6DFDF39E98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMWeb", "CrudAlunoEMViewer\EMWeb.csproj", "{38F3B6B9-8229-414E-BCC1-CD6DFDF39E98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudAlunoEMDomain", "CrudAlunoEMDomain\CrudAlunoEMDomain.csproj", "{093FBD94-9CE0-47E6-AC42-C3993440687D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMDomain", "CrudAlunoEMDomain\EMDomain.csproj", "{093FBD94-9CE0-47E6-AC42-C3993440687D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudAlunoEMRepository", "CrudAlunoEMRepository\CrudAlunoEMRepository.csproj", "{68F5B9D7-FC90-4C7E-A41D-EF03B70C8721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMRepository", "CrudAlunoEMRepository\EMRepository.csproj", "{68F5B9D7-FC90-4C7E-A41D-EF03B70C8721}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

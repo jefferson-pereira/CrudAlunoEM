@@ -1,4 +1,4 @@
-﻿namespace CrudAlunoEMDomain
+﻿namespace EMDomain
 {
     public interface IAluno<T> where T : IEntidade
     {

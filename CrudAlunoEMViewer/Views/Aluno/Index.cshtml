@@ -1,57 +1,42 @@
-﻿@model IEnumerable<CrudAlunoEMDomain.Aluno>
+﻿@model IEnumerable<EMDomain.Aluno>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Aluno</h1>
+<h1 class="text-center">Aluno</h1>
 
-<p>
-    <a asp-action="NovoAluno">Novo Aluno</a>
+<p><a asp-action="NovoAluno" class="btn btn-default">Novo Aluno</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Matricula)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataDeNascimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sexo)
-            </th>
+            <th>@Html.DisplayNameFor(model => model.Matricula)</th>
+            <th>@Html.DisplayNameFor(model => model.Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.Cpf)</th>
+            <th>@Html.DisplayNameFor(model => model.DataDeNascimento)</th>
+            <th>@Html.DisplayNameFor(model => model.Sexo)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Matricula)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataDeNascimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sexo)
-            </td>
-            <td>
-                    @Html.ActionLink("Editar", "Editar", new { matricula = item.Matricula }) |
-                    @Html.ActionLink("Ficha do aluno", "FichaDoAluno", new { matricula = item.Matricula }) |
-                    @Html.ActionLink("Excluir", "Excluir", new { matricula = item.Matricula })
+            <td>@Html.DisplayFor(modelItem => item.Matricula)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+            <td>@Html.DisplayFor(modelItem => item.Cpf)</td>
+            <td>@Html.DisplayFor(modelItem => item.DataDeNascimento)</td>
+            <td>@Html.DisplayFor(modelItem => item.Sexo)</td>
+            <td class="btn-group" role="group">
+
+                    @* <button class="btn btn-primary Editar" data-id="@item.Matricula">Editar</button>
+
+                     <a asp-area="" asp-controller="Aluno" asp-action="Editar" asp-route-id="@item.Matricula" type="button" class="btn btn-primary">Editar</a>
+                <a asp-area="" asp-controller="Aluno" asp-action="FichaDoAluno" asp-route-id="@item.Matricula" type="button" class="btn btn-primary">Ficha Do Aluno</a>
+                <a asp-area="" asp-controller="Aluno" asp-action="Excluir" asp-route-id="@item.Matricula" class="btn btn-default">Excluir</a>*@ 
+               @Html.ActionLink("Editar", "Editar", new { matricula = item.Matricula }) |
+               @Html.ActionLink(" Ficha do aluno ", "FichaDoAluno", new { matricula = item.Matricula }) |
+               @Html.ActionLink("Excluir", "Excluir", new { matricula = item.Matricula })
             </td>
         </tr>
 }

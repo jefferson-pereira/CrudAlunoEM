@@ -1,9 +1,9 @@
-﻿using CrudAlunoEMDomain;
-using CrudAlunoEMDomain.Enums;
+﻿using EMDomain;
+using EMDomain.Enums;
 using FirebirdSql.Data.FirebirdClient;
 using System.Data;
 
-namespace CrudAlunoEMRepository
+namespace EMRepository
 {
     public class MapeadorAluno : IAluno<Aluno>
     {
@@ -11,8 +11,8 @@ namespace CrudAlunoEMRepository
         {
             using FbConnection conexao = BDAluno.UseInstancia().UseConexao();
             {
-                string sql = ("UPDATE TBALUNO (NOME, SEXO, NASCIMENTO, CPF)" +
-                                       "VALUES (@NOME, @SEXO, @NASCIMENTO, @CPF)");
+                string sql = ("INSERT INTO TBALUNO (MATRICULA, NOME, SEXO, NASCIMENTO, CPF)" +
+                                       "VALUES (@MATRICULA, @NOME, @SEXO, @NASCIMENTO, @CPF)");
 
                 FbCommand comando = new(sql, conexao) {CommandType = CommandType.Text};
 
@@ -33,8 +33,8 @@ namespace CrudAlunoEMRepository
         {
             using FbConnection conexao = BDAluno.UseInstancia().UseConexao();
             {
-                string sql = ("INSERT INTO TBALUNO (MATRICULA, NOME, SEXO, NASCIMENTO, CPF)" +
-                                       "VALUES (@MATRICULA, @NOME, @SEXO, @NASCIMENTO, @CPF)");
+                string sql = ("UPDATE TBALUNO SET NOME = @NOME, SEXO = @SEXO,"+
+                                " NASCIMENTO = @NASCIMENTO, CPF = @CPF WHERE MATRICULA = @MATRICULA");
 
                 FbCommand comando = new(sql, conexao) { CommandType = CommandType.Text };
 

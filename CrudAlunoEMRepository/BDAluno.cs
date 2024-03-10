@@ -1,6 +1,6 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 
-namespace CrudAlunoEMRepository
+namespace EMRepository
 {
     public class BDAluno
     {

@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CrudAlunoEMDomain\CrudAlunoEMDomain.csproj" />
+    <ProjectReference Include="..\CrudAlunoEMDomain\EMDomain.csproj" />
   </ItemGroup>
 
 </Project>

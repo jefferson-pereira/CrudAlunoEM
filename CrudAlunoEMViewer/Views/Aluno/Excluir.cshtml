@@ -1,14 +1,14 @@
-﻿@model CrudAlunoEMDomain.Aluno
+﻿@model EMDomain.Aluno
 
 @{
     ViewData["Title"] = "Excluir";
 }
 
-<h1>Excluir</h1>
+<h1 class ="text-center">Excluir</h1>
 
 <h3>Você deseja exluir esse aluno?</h3>
 <div>
-    <h4>Aluno</h4>
+    <h5>Aluno</h5>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -44,7 +44,9 @@
     </dl>
     
     <form asp-action="Excluir">
-        <input type="submit" value="Excluir" class="btn btn-danger" /> |
-        <a asp-action="Index">Retornar a lista de alunos</a>
+        <input type="hidden" name="matricula" value="@Model.Matricula" />
+        <input type="submit" value="Excluir" class="btn btn-danger"/>
+        <a asp-action="Index" class="btn btn-secondary">Retornar a lista de alunos</a>
     </form>
+    
 </div>

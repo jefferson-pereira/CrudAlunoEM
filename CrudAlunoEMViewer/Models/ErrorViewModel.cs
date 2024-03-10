@@ -1,4 +1,4 @@
-namespace CrudAlunoEMViewer.Models
+namespace EMWeb.Models
 {
     public class ErrorViewModel
     {

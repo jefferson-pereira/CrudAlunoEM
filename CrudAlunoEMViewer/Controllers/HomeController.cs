@@ -1,8 +1,8 @@
-using CrudAlunoEMViewer.Models;
+using EMWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CrudAlunoEMViewer.Controllers
+namespace EMWeb.Controllers
 {
     public class HomeController : Controller
     {
