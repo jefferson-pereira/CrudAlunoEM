@@ -24,8 +24,8 @@
         <tr>
             <td>@Html.DisplayFor(modelItem => item.Matricula)</td>
             <td>@Html.DisplayFor(modelItem => item.Nome)</td>
-            <td>@Html.DisplayFor(modelItem => item.Cpf)</td>
-            <td>@Html.DisplayFor(modelItem => item.DataDeNascimento)</td>
+            <td cpf-formatado="@item.Cpf">@item.Cpf</td>
+            <td>@Html.DisplayFor(modelItem => item.DataDeNascimento, "{0:dd/MM/yyyy}")</td>
             <td>@Html.DisplayFor(modelItem => item.Sexo)</td>
             <td class="btn-group" role="group">
 
@@ -42,3 +42,19 @@
 }
     </tbody>
 </table>
+@section Scripts {
+    <script>
+        
+        function cpfFormatado(cpf) {
+            var formatado = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+            return formatado;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var elementosCPF = document.querySelectorAll("[cpf-formatado]");
+            elementosCPF.forEach(function (elemento) {
+                elemento.textContent = cpfFormatado(elemento.textContent);
+            });
+        });
+    </script>
+}

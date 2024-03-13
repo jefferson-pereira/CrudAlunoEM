@@ -25,7 +25,7 @@
         <dt class = "col-xl-2">
             @Html.DisplayNameFor(model => model.Cpf)
         </dt>
-        <dd class = "col-xl-10">
+        <dd class="col-xl-10" cpf-formatado>
             @Html.DisplayFor(model => model.Cpf)
         </dd>
         <dt class = "col-xl-2">
@@ -47,3 +47,20 @@
     @Html.ActionLink("Exluir", "Excluir", new { matricula = Model.Matricula }) |
     <a asp-action="Index" class="btn btn-secondary">Retornar a lista de alunos</a>
 </div>
+
+@section Scripts {
+    <script>
+
+        function cpfFormatado(cpf) {
+            var formatado = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+            return formatado;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var elementosCPF = document.querySelectorAll("[cpf-formatado]");
+            elementosCPF.forEach(function (elemento) {
+                elemento.textContent = cpfFormatado(elemento.textContent);
+            });
+        });
+    </script>
+}
